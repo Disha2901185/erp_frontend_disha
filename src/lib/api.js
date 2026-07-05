@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+let baseURL = import.meta.env.VITE_API_URL || 'http://localhost:3000/v1';
+if (baseURL.endsWith('/api')) {
+  baseURL += '/v1';
+}
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/v1',
+  baseURL,
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
@@ -9,7 +14,7 @@ const api = axios.create({
 });
 
 const multipartApi = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:3000/v1',
+  baseURL,
   withCredentials: true,
 });
 
@@ -155,8 +160,8 @@ export const fileApi = {
   uploadTenantLogo: async (file) => {
     const formData = new FormData();
     formData.append('file', file);
-    const baseUrl = (import.meta.env.VITE_API_URL || 'http://localhost:3000/v1').replace(/\/+$/, '');
-    const response = await fetch(`${baseUrl}/files/upload/tenant-logo`, {
+    const fetchUrl = baseURL.replace(/\/+$/, '');
+    const response = await fetch(`${fetchUrl}/files/upload/tenant-logo`, {
       method: 'POST',
       credentials: 'include',
       body: formData,

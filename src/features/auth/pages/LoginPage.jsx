@@ -182,8 +182,9 @@ export const LoginPage = () => {
               {isAddAccountFlow ? 'Add Another Account' : 'Welcome Back!'}
             </h1>
             <p className="text-slate-500 text-[15px]">
-              {isAddAccountFlow ? 'Sign in to add this account to your profile switcher' : 'Secure login to your ERP'}
+              {isAddAccountFlow ? 'Sign in to add this account to your profile switcher' : 'Secure login to your ERP Disha'}
             </p>
+
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">

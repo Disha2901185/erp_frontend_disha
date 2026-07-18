@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     AWS_REGION = 'ap-south-1'
-    ACCOUNT_ID = '728035102492'
+    ACCOUNT_ID = '761334627624'
     CLUSTER_NAME = 'erp-cluster'
     ECR_REGISTRY = "${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com"
     AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY_ID')

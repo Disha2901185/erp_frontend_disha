@@ -182,7 +182,7 @@ export const LoginPage = () => {
               {isAddAccountFlow ? 'Add Another Account' : 'Welcome Back!'}
             </h1>
             <p className="text-slate-500 text-[15px]">
-              {isAddAccountFlow ? 'Sign in to add this account to your profile switcher' : 'Secure login to your ERP Disha'}
+              {isAddAccountFlow ? 'Sign in to add this account to your profile switcher' : 'Secure login to your ERP '}
             </p>
 
           </div>

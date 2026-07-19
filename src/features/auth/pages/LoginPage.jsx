@@ -179,7 +179,7 @@ export const LoginPage = () => {
         <div className="relative z-10 w-full max-w-[440px] space-y-6">
           <div className="space-y-3">
             <h1 className="text-[32px] font-semibold tracking-tight text-slate-900">
-              {isAddAccountFlow ? 'Add Another Account' : 'Welcome Back Disha!'}
+              {isAddAccountFlow ? 'Add Another Account' : 'Welcome Back Disha! Har Har Mahadev!!'}
             </h1>
             <p className="text-slate-500 text-[15px]">
               {isAddAccountFlow ? 'Sign in to add this account to your profile switcher' : 'Secure login to your ERP '}
